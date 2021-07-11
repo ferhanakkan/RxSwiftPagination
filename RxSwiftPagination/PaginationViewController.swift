@@ -92,7 +92,6 @@ final class PaginationViewController: UIViewController {
     private func tableViewBind() {
 
         viewModel.items.bind(to: tableView.rx.items) { tableView, _, item in
-            tableView.tableFooterView =  UIView(frame: .zero)
             let cell = tableView
                 .dequeueReusableCell(withIdentifier: UITableViewCell.description())
             cell?.textLabel?.text = item

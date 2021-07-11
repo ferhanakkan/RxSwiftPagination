@@ -24,6 +24,7 @@ final class PaginationViewModel {
     private var pageCounter = 1
     private var maxValue = 1
     private var isPaginationRequestStillResume = false
+    private var isRefreshRequstStillResume = false
     
     init() {
         bind()
@@ -33,7 +34,8 @@ final class PaginationViewModel {
 
         fetchMoreDatas.subscribe { [weak self] _ in
             guard let self = self else { return }
-            self.fetchDummyData(page: self.pageCounter)
+            self.fetchDummyData(page: self.pageCounter,
+                                isRefreshControl: false)
         }
         .disposed(by: disposeBag)
 
@@ -43,27 +45,29 @@ final class PaginationViewModel {
         .disposed(by: disposeBag)
     }
 
-    private func fetchDummyData(page: Int) {
+    private func fetchDummyData(page: Int, isRefreshControl: Bool) {
+        if isPaginationRequestStillResume || isRefreshRequstStillResume { return }
+        self.isRefreshRequstStillResume = isRefreshControl
+        
         if pageCounter > maxValue  {
             isPaginationRequestStillResume = false
             return
         }
-        
-        if isPaginationRequestStillResume { return }
+       
         isPaginationRequestStillResume = true
         isLoadingSpinnerAvaliable.onNext(true)
         
-        if pageCounter == 1 {
+        if pageCounter == 1  || isRefreshControl {
             isLoadingSpinnerAvaliable.onNext(false)
         }
         
         // For your real service you have to handle fail status.
-        
         dummyService.fetchDatas(page: page) { [weak self] dummyResponse in
+            self?.handleDummyData(data: dummyResponse)
             self?.isLoadingSpinnerAvaliable.onNext(false)
             self?.isPaginationRequestStillResume = false
+            self?.isRefreshRequstStillResume = false
             self?.refreshControlCompelted.onNext(())
-            self?.handleDummyData(data: dummyResponse)
         }
     }
 
@@ -81,10 +85,11 @@ final class PaginationViewModel {
     }
 
     private func refreshControlTriggered() {
-//        moviesAPI.cancelAllRequests() For your previous network request you have to cancel them. Alamofire has a function to cancel all reuqests.
-        pageCounter = 1
+//        moviesAPI.cancelAllRequests() For your network request you have to cancel previous requests. Alamofire has a function to cancel all reuqests.
         isPaginationRequestStillResume = false
+        pageCounter = 1
         items.accept([])
-        fetchMoreDatas.onNext(())
+        fetchDummyData(page: pageCounter,
+                       isRefreshControl: true)
     }
 }

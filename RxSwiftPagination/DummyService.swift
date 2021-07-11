@@ -19,13 +19,13 @@ struct DummyService {
     
     func fetchDatas(page: Int, completion: @escaping (DummyServiceResponse) -> ()) {
         if page > maxPage {
-            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            DispatchQueue.main.asyncAfter(deadline: .now()+8) {
                 completion(DummyServiceResponse(maxPage: maxPage,
                                                 hasMore: false,
                                                 datas: nil))
             }
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            DispatchQueue.main.asyncAfter(deadline: .now()+8) {
                 completion(DummyServiceResponse(maxPage: maxPage,
                                                 hasMore: page != maxPage,
                                                 datas: ["a","b","c","d","e","f","g"]))
