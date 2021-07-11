@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		58B20F44269B21900008EF2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B20F43269B21900008EF2E /* AppDelegate.swift */; };
-		58B20F46269B21900008EF2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B20F45269B21900008EF2E /* SceneDelegate.swift */; };
-		58B20F48269B21900008EF2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B20F47269B21900008EF2E /* ViewController.swift */; };
-		58B20F4B269B21900008EF2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B20F49269B21900008EF2E /* Main.storyboard */; };
 		58B20F4D269B21900008EF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B20F4C269B21900008EF2E /* Assets.xcassets */; };
 		58B20F50269B21900008EF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B20F4E269B21900008EF2E /* LaunchScreen.storyboard */; };
+		58B20F58269B21EC0008EF2E /* PaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B20F57269B21EC0008EF2E /* PaginationViewController.swift */; };
+		58B20F5A269B21F70008EF2E /* PaginationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B20F59269B21F70008EF2E /* PaginationViewModel.swift */; };
+		58B20F5C269B25E10008EF2E /* DummyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B20F5B269B25E10008EF2E /* DummyService.swift */; };
+		AA92D9A069584259A77A574F /* Pods_RxSwiftPagination.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9C341FAB78E205390AC215 /* Pods_RxSwiftPagination.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D5019DC73EA39094D3CBEA9 /* Pods-RxSwiftPagination.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPagination.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPagination/Pods-RxSwiftPagination.release.xcconfig"; sourceTree = "<group>"; };
 		58B20F40269B21900008EF2E /* RxSwiftPagination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPagination.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B20F43269B21900008EF2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58B20F45269B21900008EF2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58B20F47269B21900008EF2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		58B20F4A269B21900008EF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58B20F4C269B21900008EF2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58B20F4F269B21900008EF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58B20F51269B21900008EF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B20F57269B21EC0008EF2E /* PaginationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationViewController.swift; sourceTree = "<group>"; };
+		58B20F59269B21F70008EF2E /* PaginationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationViewModel.swift; sourceTree = "<group>"; };
+		58B20F5B269B25E10008EF2E /* DummyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyService.swift; sourceTree = "<group>"; };
+		6E9C341FAB78E205390AC215 /* Pods_RxSwiftPagination.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPagination.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA2B6F9598F9D5B12FD5AE5 /* Pods-RxSwiftPagination.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPagination.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftPagination/Pods-RxSwiftPagination.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA92D9A069584259A77A574F /* Pods_RxSwiftPagination.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				58B20F42269B21900008EF2E /* RxSwiftPagination */,
 				58B20F41269B21900008EF2E /* Products */,
+				9BACB571898413590EE5496F /* Pods */,
+				7EB4B7D63F2E6616BB062980 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +64,31 @@
 			isa = PBXGroup;
 			children = (
 				58B20F43269B21900008EF2E /* AppDelegate.swift */,
-				58B20F45269B21900008EF2E /* SceneDelegate.swift */,
-				58B20F47269B21900008EF2E /* ViewController.swift */,
-				58B20F49269B21900008EF2E /* Main.storyboard */,
 				58B20F4C269B21900008EF2E /* Assets.xcassets */,
 				58B20F4E269B21900008EF2E /* LaunchScreen.storyboard */,
 				58B20F51269B21900008EF2E /* Info.plist */,
+				58B20F57269B21EC0008EF2E /* PaginationViewController.swift */,
+				58B20F59269B21F70008EF2E /* PaginationViewModel.swift */,
+				58B20F5B269B25E10008EF2E /* DummyService.swift */,
 			);
 			path = RxSwiftPagination;
+			sourceTree = "<group>";
+		};
+		7EB4B7D63F2E6616BB062980 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E9C341FAB78E205390AC215 /* Pods_RxSwiftPagination.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BACB571898413590EE5496F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DA2B6F9598F9D5B12FD5AE5 /* Pods-RxSwiftPagination.debug.xcconfig */,
+				4D5019DC73EA39094D3CBEA9 /* Pods-RxSwiftPagination.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B20F54269B21900008EF2E /* Build configuration list for PBXNativeTarget "RxSwiftPagination" */;
 			buildPhases = (
+				AC2006E57085E41A99F14FE7 /* [CP] Check Pods Manifest.lock */,
 				58B20F3C269B21900008EF2E /* Sources */,
 				58B20F3D269B21900008EF2E /* Frameworks */,
 				58B20F3E269B21900008EF2E /* Resources */,
+				D446A46A5296DC6B0279C310 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +152,68 @@
 			files = (
 				58B20F50269B21900008EF2E /* LaunchScreen.storyboard in Resources */,
 				58B20F4D269B21900008EF2E /* Assets.xcassets in Resources */,
-				58B20F4B269B21900008EF2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC2006E57085E41A99F14FE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwiftPagination-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D446A46A5296DC6B0279C310 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwiftPagination/Pods-RxSwiftPagination-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwiftPagination/Pods-RxSwiftPagination-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxSwiftPagination/Pods-RxSwiftPagination-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B20F3C269B21900008EF2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B20F48269B21900008EF2E /* ViewController.swift in Sources */,
+				58B20F58269B21EC0008EF2E /* PaginationViewController.swift in Sources */,
+				58B20F5A269B21F70008EF2E /* PaginationViewModel.swift in Sources */,
+				58B20F5C269B25E10008EF2E /* DummyService.swift in Sources */,
 				58B20F44269B21900008EF2E /* AppDelegate.swift in Sources */,
-				58B20F46269B21900008EF2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		58B20F49269B21900008EF2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58B20F4A269B21900008EF2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		58B20F4E269B21900008EF2E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +343,7 @@
 		};
 		58B20F55269B21900008EF2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DA2B6F9598F9D5B12FD5AE5 /* Pods-RxSwiftPagination.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +357,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.RxSwiftPagination;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		58B20F56269B21900008EF2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D5019DC73EA39094D3CBEA9 /* Pods-RxSwiftPagination.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ferhanakkan.RxSwiftPagination;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
